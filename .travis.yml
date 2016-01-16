@@ -6,3 +6,6 @@ services:
 script:
   - docker build -t nanogi .
   - docker run nanogi
+after_success:
+  - sudo utils/export-nanogi-dist.sh
+  - ls

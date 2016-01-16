@@ -9,8 +9,8 @@ script:
 after_success:
   - pwd
   - sudo git clone https://github.com/mvanholsteijn/strip-docker-image
-  - ls
-  - export PATH=$PATH:./strip-docker-image/bin
+  - ls /home/travis/build/soma-arc/nanogi/strip-docker-image/bin
+  - export PATH=$PATH:/home/travis/build/soma-arc/nanogi/strip-docker-image/bin
   - sudo sh utils/strip-nanogi-docker-image.sh
   - sudo sh utils/export-nanogi-dist.sh
   - ls

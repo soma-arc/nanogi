@@ -11,7 +11,8 @@ after_success:
   - sudo git clone https://github.com/mvanholsteijn/strip-docker-image
   - ls /home/travis/build/soma-arc/nanogi/strip-docker-image/bin
   - export PATH=$PATH:/home/travis/build/soma-arc/nanogi/strip-docker-image/bin
-  - sudo chmod +x strip-docker-image/bin/strip-docker-image
+  - sudo chmod +x ./strip-docker-image/bin/strip-docker-image
+  - strip-docker-image
   - sudo sh utils/strip-nanogi-docker-image.sh
   - sudo sh utils/export-nanogi-dist.sh
   - ls

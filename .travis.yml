@@ -7,8 +7,6 @@ script:
   - docker build -t nanogi .
   - docker run nanogi
 after_success:
+  - sudo sh utils/strip-nanogi-docker-image.sh
   - sudo sh utils/export-nanogi-dist.sh
   - ls
-  - ls utils
-  - cp utils/export-nanogi-dist.sh ./export-nanogi-dist.sh
-  - sudo sh ./export-nanogi-dist.sh

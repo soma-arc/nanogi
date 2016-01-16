@@ -9,7 +9,7 @@ script:
 after_success:
   - sudo git clone https://github.com/mvanholsteijn/strip-docker-image
   - ls
-  - export PATH=$PATH;strip-docker-image/bin
+  - export PATH=$PATH:strip-docker-image/bin
   - sudo sh utils/strip-nanogi-docker-image.sh
   - sudo sh utils/export-nanogi-dist.sh
   - ls
